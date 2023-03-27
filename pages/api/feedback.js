@@ -4,11 +4,11 @@ import path from "path";
 // Don't export a react component
 // The code will never be exposed to our visitors
 
-function buildFeedbackPath() {
+export function buildFeedbackPath() {
   return path.join(process.cwd(), "data", "feedback.json");
 }
 
-function extractFeedback(filePath) {
+export function extractFeedback(filePath) {
   const fileData = fs.readFileSync(filePath);
   const data = JSON.parse(fileData);
   return data;
